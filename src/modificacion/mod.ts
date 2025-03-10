@@ -110,7 +110,7 @@ export class ArrayMethods <T> {
   }
   /**
    * Function that applies a condition to the array without returning anything.
-   * This function doesnt modify the array.
+   * > This function doesnt modify the array.
    * @param callback - The condition to apply to the array.
    */
   forEach(callback: (value: T) => void): void {
