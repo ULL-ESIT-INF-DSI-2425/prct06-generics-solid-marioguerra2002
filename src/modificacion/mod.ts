@@ -84,4 +84,38 @@ export class ArrayMethods <T> {
     }
     return result.getArray();
   }
+  /**
+   * Function that reduces the array to a single value.
+   * @param callback - The condition to reduce the array.
+   * @param initialValue - The initial value to start the reduction.
+   * @returns The array reduced to a single value.
+   */
+  reduce(callback: (acc: T, value: T) => T, initialValue: T): T {
+    let result = initialValue;
+    for (let i = 0; i < this.length_(); i++) {
+      result = callback(result, this.array[i]);
+    }
+    return result;
+  }
+  /**
+   * Function that reverses the array.
+   * @returns The array reversed.
+   */
+  reverse(): T[] {
+    let result: ArrayMethods<T> = new ArrayMethods([]);
+    for (let i = this.length_() - 1; i >= 0; i-- ) {
+      result.getArray()[result.length_()] = this.array[i];
+    }
+    return result.array;
+  }
+  /**
+   * Function that applies a condition to the array without returning anything.
+   * > This function doesnt modify the array.
+   * @param callback - The condition to apply to the array.
+   */
+  forEach(callback: (value: T) => void): void {
+    for (let i = 0; i < this.length_(); i++) {
+      callback(this.array[i]);
+    }
+  }
 }
