@@ -15,6 +15,7 @@
     "coverage_5": "vitest run --coverage --coverage.include src/ejercicio5/**/*.ts",
     "coverage_6": "vitest run --coverage --coverage.include src/ejercicio6/**/*.ts",
     "coverage_mod": "vitest run --coverage --coverage.include src/modificacion/**/*.ts",
+    "coverage_mod2": "vitest run --coverage --coverage.include src/modificacion2/**/*.ts",
     "prettier": "prettier --write ."
   },
   "repository": {
@@ -24,6 +25,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/ULL-ESIT-INF-DSI-2425/prct06-generics-solid-marioguerra2002/issues"
   },
